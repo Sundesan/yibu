@@ -1,31 +1,69 @@
-/* styles.css */
-
 /* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Main Content Styling */
+main {
+  padding: 80px 20px 20px; /* Push content below the fixed header */
+  text-align: center;
+}
+
+/* Heading Styling */
+h1 {
+  color: #4caf50;
+}
+
+/* Button Styling */
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Header styles */
+.site-header {
+  background-color: #f4f4f4;
+  color: black;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: fixed; /* Make the header fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add slight shadow for separation */
+  z-index: 10;
+  border-bottom: 1px solid #ddd; /* Optional border for definition */
+}
+
+/* Header text */
+.header-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Breakpoints for responsive header */
+@media (min-width: 48em) { /* Tablet breakpoint */
+  .header-text {
+      font-size: 2rem;
   }
-  
-  /* Heading Styling */
-  h1 {
-    color: #4caf50;
+}
+
+@media (min-width: 64em) { /* Desktop breakpoint */
+  .header-text {
+      font-size: 2.5rem;
   }
-  
-  /* Button Styling */
-  button {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
+}
