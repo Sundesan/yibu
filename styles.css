@@ -3,33 +3,58 @@ body {
   font-family: Arial, sans-serif;
   background-color: #ffffff;
   color: #333;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  margin: 0;
+  padding: 0;
 }
 
 /* Main Content Styling */
 main {
-  padding: 80px 20px 20px; /* Push content below the fixed header */
+  padding: 80px 20px 20px;
   text-align: center;
 }
 
-/* Heading Styling */
-h1 {
-  color: #4caf50;
+/* Form Styling */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-/* Button Styling */
-button {
-  padding: 10px 20px;
+form label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+form input, form textarea, form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+form button {
   background-color: #4caf50;
   color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-button:hover {
+form button:hover {
   background-color: #45a049;
+}
+
+/* Two-column row styling */
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.column {
+  flex: 1;
 }
 
 /* Header styles */
@@ -40,30 +65,16 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  position: fixed; /* Make the header fixed */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add slight shadow for separation */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 10;
-  border-bottom: 1px solid #ddd; /* Optional border for definition */
 }
 
 /* Header text */
 .header-text {
   font-size: 1.5rem;
   font-weight: bold;
-}
-
-/* Breakpoints for responsive header */
-@media (min-width: 48em) { /* Tablet breakpoint */
-  .header-text {
-      font-size: 2rem;
-  }
-}
-
-@media (min-width: 64em) { /* Desktop breakpoint */
-  .header-text {
-      font-size: 2.5rem;
-  }
 }

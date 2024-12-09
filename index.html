@@ -1,28 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YIBU Event Planner</title>
-    <!-- Link the CSS file -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YIBU Event Planner</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="site-header">
-        <div class="header-text">YIBU</div>
-    </header>
+  <header class="site-header">
+    <div class="header-text">YIBU</div>
+  </header>
 
-    <!-- Main Content -->
-    <main>
-        <h1>Event Planner</h1>
-        <p>Welcome to the Event Planner demo!</p>
+  <main>
+    <h1>Create Your Event</h1>
+    <p>Fill in the details below to get started with creating your event.</p>
+    
+    <form id="event-form">
+      <label for="event-name">Event Name</label>
+      <input type="text" id="event-name" name="event-name" placeholder="Enter event name" required>
 
-        <!-- Add a button to test JavaScript -->
-        <button id="testButton">Click Me</button>
-    </main>
+      <label for="event-description">Event Description</label>
+      <textarea id="event-description" name="event-description" placeholder="Enter event description" required></textarea>
 
-    <!-- Link the JavaScript file -->
-    <script src="script.js"></script>
+      <div class="row">
+        <div class="column">
+          <label for="start-time">Start Time</label>
+          <input type="datetime-local" id="start-time" name="start-time" required>
+        </div>
+        <div class="column">
+          <label for="end-time">End Time</label>
+          <input type="datetime-local" id="end-time" name="end-time" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <label for="registration-opens">Registration Opens</label>
+          <input type="datetime-local" id="registration-opens" name="registration-opens" required>
+        </div>
+        <div class="column">
+          <label for="registration-closes">Registration Closes</label>
+          <input type="datetime-local" id="registration-closes" name="registration-closes" required>
+        </div>
+      </div>
+
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" placeholder="Enter location" readonly>
+
+      <button type="submit">Next</button>
+    </form>
+  </main>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+  <script src="script.js"></script>
 </body>
 </html>
