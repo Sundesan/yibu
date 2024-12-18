@@ -1,80 +1,116 @@
-/* General Body Styling */
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  color: #333;
   margin: 0;
   padding: 0;
+  background-color: #f9f9f9;
 }
 
-/* Main Content Styling */
-main {
-  padding: 80px 20px 20px;
-  text-align: center;
-}
-
-/* Form Styling */
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-form label {
-  display: block;
-  font-weight: bold;
-  margin: 10px 0 5px;
-}
-
-form input, form textarea, form button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-form button {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #45a049;
-}
-
-/* Two-column row styling */
-.row {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.column {
-  flex: 1;
-}
-
-/* Header styles */
 .site-header {
   background-color: #f4f4f4;
-  color: black;
   padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  text-align: left; /* Align header to the left */
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
 
-/* Header text */
 .header-text {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-left: 20px; /* Padding for logo */
+}
+
+/* Progress Bar */
+.progress-bar {
+  margin: 100px auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ccc;
+  position: relative;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.line {
+  flex: 1;
+  height: 4px;
+  background: #ddd;
+}
+
+.step.active .circle {
+  border-color: #4caf50;
+  color: #4caf50;
+}
+
+.step.completed .circle {
+  background-color: #4caf50;
+  color: white;
+}
+
+.step.completed p {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.step-container {
+  display: none;
+  max-width: 500px;
+  margin: 20px auto;
+  background: #f8f8f8;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.step-container.active {
+  display: block;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #45a049;
 }
