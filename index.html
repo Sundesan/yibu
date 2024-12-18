@@ -18,10 +18,26 @@
       <div class="circle" id="circle-1">1</div>
       <p>Event Details</p>
     </div>
+    <div class="line"></div>
+    <div class="step" id="step-2-indicator">
+      <div class="circle" id="circle-2">2</div>
+      <p>Add Sessions</p>
+    </div>
+    <div class="line"></div>
+    <div class="step" id="step-3-indicator">
+      <div class="circle" id="circle-3">3</div>
+      <p>Upload Invitees</p>
+    </div>
+    <div class="line"></div>
+    <div class="step" id="step-4-indicator">
+      <div class="circle" id="circle-4">4</div>
+      <p>Review & Publish</p>
+    </div>
   </div>
 
-  <!-- Step 1 Content -->
+  <!-- Steps -->
   <main>
+    <!-- Step 1 -->
     <div id="step-1" class="step-container active">
       <h2>Step 1: Event Details</h2>
       <form>
@@ -33,6 +49,32 @@
 
         <button type="button" class="btn" id="next-1">Next</button>
       </form>
+    </div>
+
+    <!-- Step 2 -->
+    <div id="step-2" class="step-container">
+      <h2>Step 2: Add Sessions</h2>
+      <label for="session-name">Session Name</label>
+      <input type="text" id="session-name" placeholder="Enter session name" required>
+
+      <button type="button" class="btn" id="next-2">Next</button>
+    </div>
+
+    <!-- Step 3 -->
+    <div id="step-3" class="step-container">
+      <h2>Step 3: Upload Invitees</h2>
+      <label for="invitees">Upload CSV File</label>
+      <input type="file" id="invitees" accept=".csv" required>
+
+      <button type="button" class="btn" id="next-3">Next</button>
+    </div>
+
+    <!-- Step 4 -->
+    <div id="step-4" class="step-container">
+      <h2>Step 4: Review & Publish</h2>
+      <p>All details are saved. Click publish to finalize your event.</p>
+
+      <button type="button" class="btn" id="publish">Publish</button>
     </div>
   </main>
 
